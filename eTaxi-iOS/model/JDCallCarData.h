@@ -1,0 +1,46 @@
+//
+//  JDCallCarData.h
+//  eTaxi-iOS
+//
+//  Created by jeader on 16/4/22.
+//  Copyright © 2016年 jeader. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface JDCallCarData : NSObject
+/**
+ *  乘客手机号
+ */
+@property (nonatomic, copy) NSString *passengerPhoneNo;
+/**
+ *  乘车时间
+ */
+@property (nonatomic, copy) NSString *time;
+/**
+ *  乘车地点
+ */
+@property (nonatomic, copy) NSString *address;
+/**
+ *  目的地
+ */
+@property (nonatomic, copy) NSString *destination;
+/**
+ *  用车类型 0:现在用车，1：预约用车
+ */
+@property (nonatomic, copy) NSString *useType;
+/**
+ *  单子编号
+ */
+@property (nonatomic, copy) NSString *orderId;
+/**
+ *  订单状态，type为3的时候需要 0生成订单,1接单,2上车,3取消订单,4现金支付完成,5待付款,6在线支付完成
+ */
+@property (nonatomic, copy) NSString *orderStatus;
+
+
+@property(nonatomic ,copy) NSString *orderFinishCount;
+
++(instancetype)callCarDataWithDictionary:(NSDictionary *)dict;
+
+@end
